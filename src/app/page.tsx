@@ -35,6 +35,13 @@ export default function Home() {
             Patched isr cache (streaming) no simulated latency
           </Link>
         </li>
+        <li>
+          <Link href={'/streaming-node-runtime'}
+            className='text-blue-500 hover:text-blue-700'
+          >
+            same as bugged (node runtime)
+          </Link>
+        </li>
       </ul>
     </main>
   );

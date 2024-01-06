@@ -1,4 +1,4 @@
-import { unstable_cache } from "next/cache";
+import { unstable_cache, unstable_noStore } from "next/cache";
 
 export const waitFor = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -51,6 +51,15 @@ export async function CachedDate() {
 }
 
 export async function CachedDateWithLatency() {
+  const date = await cachedDateWithLatency();
+  return <div>
+    Cached value 10 sec: {new Date(date).toLocaleString("en-US", {
+      timeZone: "America/New_York",
+    })}
+  </div>
+}
+
+export async function CachedDateWithLatencyNoStore() {
   const date = await cachedDateWithLatency();
   return <div>
     Cached value 10 sec: {new Date(date).toLocaleString("en-US", {
