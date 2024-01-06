@@ -11,35 +11,35 @@ export default function Home() {
           <Link href={'/streaming-cache-no-simulated-latency'}
             className='text-blue-500 hover:text-blue-700'
           >
-            Not Bugged isr cache (streaming) no simulated latency
+            Not Bugged isr cache (streaming) no simulated latency (edge)
           </Link>
         </li>
         <li>
           <Link href={'/streaming-cache-bugged'}
             className='text-blue-500 hover:text-blue-700'
           >
-            Bugged isr cache (streaming) with 200ms latency
+            Bugged isr cache (streaming) with 200ms latency (edge)
           </Link>
         </li>
         <li>
           <Link href={'/streaming-cache-patch'}
             className='text-blue-500 hover:text-blue-700'
           >
-            Patched isr cache (streaming) with 200ms latency
+            Patched isr cache (streaming) with 200ms latency (edge)
           </Link>
         </li>
         <li>
           <Link href={'/streaming-cache-patch-no-simulated-latency'}
             className='text-blue-500 hover:text-blue-700'
           >
-            Patched isr cache (streaming) no simulated latency
+            Patched isr cache (streaming) no simulated latency (edge)
           </Link>
         </li>
         <li>
           <Link href={'/streaming-node-runtime'}
             className='text-blue-500 hover:text-blue-700'
           >
-            same as bugged (node runtime)
+            same as bugged (node)
           </Link>
         </li>
       </ul>

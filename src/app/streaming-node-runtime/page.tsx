@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import {
-  CachedDateWithLatencyNoStore,
+  CachedDateWithLatency,
 } from "../_queries/cached";
 import { unstable_noStore } from "next/cache";
 
@@ -13,9 +13,11 @@ export default function Patched() {
     Time: {now.toLocaleString("en-US", {
       timeZone: "America/New_York",
     })}
-    <div>Why is the value not revalidating (when reloading):</div>
+    <div>
+      Value revalidates when the cache expires (same component as edge runtime)
+    </div>
     <Suspense fallback={'loading'}>
-      <CachedDateWithLatencyNoStore />
+      <CachedDateWithLatency />
     </Suspense>
   </div>
 }
