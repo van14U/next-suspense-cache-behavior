@@ -5,7 +5,7 @@ export const runtime = "edge";
 export default function Home() {
   return (
     <main className="mx-auto h-screen min-h-screen w-full max-w-5xl font-mono">
-      <h1 className="pt-8 text-xl font-semibold">Cache tests without KV using unstable_cache</h1>
+      <h1 className="pt-8 text-xl font-semibold">Cache tests on Vercel using unstable_cache</h1>
       <ul>
         <li>
           <Link href={'/streaming-cache-no-simulated-latency'}
